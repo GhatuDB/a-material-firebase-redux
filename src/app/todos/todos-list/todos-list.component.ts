@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { AngularFirestore } from 'angularfire2/firestore';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-todos-list',
@@ -7,7 +9,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TodosListComponent implements OnInit {
 
-  constructor() { }
+  items: Observable<any[]>;
+  constructor(db: AngularFirestore) {
+    this.items = db.collection('items').valueChanges();
+  }
 
   ngOnInit() {
   }
