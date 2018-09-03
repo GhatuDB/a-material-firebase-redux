@@ -2,9 +2,12 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from '@angular/common/http';
+// Firebase Added
 import { AngularFireModule } from 'angularfire2';
 import { AngularFirestore } from 'angularfire2/firestore';
 
+// Ngrx added
+// import { StoreModule } from "@ngrx/store";
 import { environment } from '../environments/environment';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -95,7 +98,8 @@ import {
     MatToolbarModule,
     MatTooltipModule,
     MatTreeModule,
-    AngularFireModule.initializeApp(environment.firebase)
+    AngularFireModule.initializeApp(environment.firebase),
+    // StoreModule
   ],
   providers: [AngularFirestore],
   bootstrap: [AppComponent]
