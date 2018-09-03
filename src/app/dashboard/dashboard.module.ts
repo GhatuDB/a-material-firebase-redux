@@ -7,12 +7,18 @@ import { postReducer } from "./reducers/post.reducer";
 import { DashboardRoutingModule } from './dashboard-routing.module';
 import { DashboardComponent } from './dashboard/dashboard.component';
 
+import {
+  MatButtonModule,
+  
+} from '@angular/material';
+
 @NgModule({
   imports: [
     CommonModule,
     DashboardRoutingModule,
     FormsModule,
-    StoreModule.forRoot({post: postReducer})
+    StoreModule.forRoot({post: postReducer}),
+    MatButtonModule,
   ],
   declarations: [DashboardComponent]
 })

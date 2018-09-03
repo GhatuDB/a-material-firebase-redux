@@ -1,10 +1,10 @@
 <div class="row" *ngIf="post$ | async as p">
   <h2>{{p.title}}</h2>
   <h4>Votes: {{p.likes}}</h4>
-  <button (click)="upVote()">UpVote</button>
-  <button (click)="downVote()">DownVote</button>
-  <button (click)="resetPost()">Reset</button>
-  <input [(ngModel)]="text">
-  <button (click)="editText()">Change Title</button>
+  <button (click)="upVote()" mat-raised-button color="accent">UpVote</button>
+  <button (click)="downVote()" mat-raised-button>DownVote</button>
+  <button (click)="resetPost()" mat-raised-button>Reset</button>
+  <input [(ngModel)]="text" >
+  <button (click)="editText()" mat-raised-button>Change Title</button>
 </div>
 
